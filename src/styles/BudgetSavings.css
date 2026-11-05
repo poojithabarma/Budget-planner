@@ -1,0 +1,487 @@
+
+.budget-planner {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 28px;
+    color: #ffffff;
+}
+
+.budget-header {
+    margin-bottom: 28px;
+}
+
+.budget-label {
+    color: #6EE7C8;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.budget-header h1 {
+    font-size: 30px;
+    margin: 0 0 10px;
+    color: #ffffff;
+}
+
+.budget-header > p:last-child {
+    color: #A9C1C0;
+    line-height: 1.6;
+}
+
+.budget-card {
+    background: #102A32;
+    border: 1px solid rgba(169, 229, 209, 0.12);
+    border-radius: 16px;
+    padding: 25px;
+    margin-bottom: 22px;
+}
+
+.step-heading {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 24px;
+}
+
+.step-number {
+    width: 38px;
+    height: 38px;
+    min-width: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #1E9B83;
+    color: #ffffff;
+    border-radius: 50%;
+    font-weight: 700;
+}
+
+.step-heading h2 {
+    margin: 0 0 6px;
+    font-size: 19px;
+    color: #ffffff;
+}
+
+.step-heading p {
+    margin: 0;
+    color: #A9C1C0;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.salary-input {
+    max-width: 450px;
+}
+
+.budget-planner label {
+    display: block;
+    color: #A9E5D1;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 9px;
+}
+
+.budget-planner input {
+    width: 100%;
+    min-width: 0;
+    padding: 12px 14px;
+    background: #071821;
+    color: #ffffff;
+    border: 1px solid #31504F;
+    border-radius: 8px;
+    outline: none;
+    font-size: 14px;
+}
+
+.budget-planner input:focus {
+    border-color: #1E9B83;
+    box-shadow: 0 0 0 2px rgba(30, 155, 131, 0.15);
+}
+
+.goal-choice {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.choice-button {
+    padding: 12px 20px;
+    background: #071821;
+    color: #A9C1C0;
+    border: 1px solid #31504F;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+.choice-button:hover,
+.choice-button.selected {
+    background: #1E9B83;
+    border-color: #1E9B83;
+    color: #ffffff;
+}
+
+.normal-plan-message {
+    background: rgba(30, 155, 131, 0.12);
+    border-left: 4px solid #1E9B83;
+    border-radius: 8px;
+    padding: 16px;
+    margin-top: 22px;
+}
+
+.normal-plan-message h3 {
+    margin: 0 0 8px;
+    color: #6EE7C8;
+}
+
+.normal-plan-message p {
+    margin: 0;
+    color: #A9C1C0;
+    line-height: 1.6;
+    font-size: 14px;
+}
+
+.goal-form {
+    margin-top: 25px;
+    padding: 20px;
+    background: #071821;
+    border-radius: 12px;
+}
+
+.goal-form h3,
+.goals-list h3 {
+    margin: 0 0 18px;
+    color: #A9E5D1;
+    font-size: 16px;
+}
+
+.goal-form-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+    margin-bottom: 18px;
+}
+
+.secondary-button,
+.primary-button {
+    padding: 12px 20px;
+    background: #1E9B83;
+    border: none;
+    border-radius: 8px;
+    color: #ffffff;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.secondary-button:hover,
+.primary-button:hover {
+    background: #157A68;
+}
+
+.goals-list {
+    margin-top: 25px;
+}
+
+.goal-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 16px;
+    margin-bottom: 12px;
+    background: #071821;
+    border: 1px solid #24433F;
+    border-radius: 10px;
+}
+
+.goal-item strong {
+    color: #ffffff;
+}
+
+.goal-item p {
+    margin: 7px 0 0;
+    color: #A9C1C0;
+    font-size: 13px;
+}
+
+.goal-item .goal-monthly {
+    color: #6EE7C8;
+    font-weight: 600;
+}
+
+.delete-goal {
+    padding: 8px 12px;
+    background: transparent;
+    color: #FF8F8F;
+    border: 1px solid #8D4545;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+.delete-goal:hover {
+    background: rgba(255, 100, 100, 0.12);
+}
+
+.category-pool {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 18px;
+    margin-bottom: 22px;
+    background: #071821;
+    border-radius: 10px;
+}
+
+.category-pool span {
+    color: #A9C1C0;
+    font-size: 14px;
+}
+
+.category-pool strong {
+    color: #6EE7C8;
+    font-size: 21px;
+}
+
+.allocation-heading,
+.allocation-row {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr 1fr;
+    align-items: center;
+    gap: 18px;
+}
+
+.allocation-heading {
+    padding: 10px 12px;
+    color: #A9E5D1;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.allocation-row {
+    padding: 14px 12px;
+    border-bottom: 1px solid rgba(169, 229, 209, 0.12);
+}
+
+.allocation-row > strong {
+    font-size: 14px;
+    color: #ffffff;
+}
+
+.allocation-controls {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.allocation-controls input {
+    max-width: 85px;
+    padding: 9px;
+}
+
+.allocation-controls span {
+    color: #A9C1C0;
+}
+
+.allocation-total {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 17px 12px;
+    color: #A9E5D1;
+    font-weight: 600;
+}
+
+.allocation-total strong {
+    color: #6EE7C8;
+}
+
+.unallocated-info {
+    padding: 13px;
+    background: rgba(30, 155, 131, 0.1);
+    color: #A9E5D1;
+    border-radius: 8px;
+    font-size: 13px;
+}
+
+.budget-summary-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 14px;
+    margin-bottom: 22px;
+}
+
+.summary-card {
+    padding: 18px;
+    background: #071821;
+    border: 1px solid #24433F;
+    border-radius: 10px;
+}
+
+.summary-card span {
+    display: block;
+    color: #A9C1C0;
+    font-size: 12px;
+    margin-bottom: 12px;
+}
+
+.summary-card strong {
+    color: #6EE7C8;
+    font-size: 19px;
+    overflow-wrap: anywhere;
+}
+
+.goal-plan-message {
+    padding: 18px;
+    margin-bottom: 22px;
+    background: #071821;
+    border-radius: 10px;
+}
+
+.goal-plan-message h3 {
+    margin: 0 0 12px;
+    color: #A9E5D1;
+}
+
+.goal-summary-list > div {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 12px 0;
+    border-bottom: 1px solid #24433F;
+    color: #A9C1C0;
+}
+
+.goal-summary-list strong {
+    color: #6EE7C8;
+}
+
+.primary-button {
+    width: 100%;
+    padding: 15px;
+    font-size: 15px;
+}
+
+.budget-warning {
+    color: #FFB66D;
+    line-height: 1.6;
+    font-size: 13px;
+    margin: 14px 0;
+}
+
+.budget-success {
+    color: #6EE7C8;
+    line-height: 1.6;
+    font-size: 13px;
+    margin: 14px 0;
+}
+
+.budget-message {
+    color: #A9E5D1;
+    font-size: 13px;
+    margin-top: 15px;
+}
+
+.empty-goals {
+    padding: 18px;
+    background: #071821;
+    color: #A9C1C0;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.budget-disclaimer {
+    color: #A9C1C0;
+    font-size: 12px;
+    line-height: 1.6;
+    padding: 5px 2px 20px;
+}
+
+@media (max-width: 900px) {
+    .budget-summary-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .goal-form-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 650px) {
+    .budget-planner {
+        padding: 15px;
+    }
+
+    .budget-header h1 {
+        font-size: 24px;
+    }
+
+    .budget-card {
+        padding: 18px;
+    }
+
+    .goal-form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .allocation-heading {
+        display: none;
+    }
+
+    .allocation-row {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+
+    .allocation-row > strong:last-child {
+        grid-column: 1 / -1;
+    }
+
+    .goal-item {
+        align-items: flex-start;
+    }
+}
+
+@media (max-width: 400px) {
+    .budget-summary-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .goal-choice {
+        flex-direction: column;
+    }
+
+    .choice-button {
+        width: 100%;
+    }
+
+    .category-pool {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
+
+
+.goal-item-details {
+    flex: 1;
+    min-width: 0;
+}
+
+.goal-item-details input {
+    max-width: 220px;
+    margin-top: 5px;
+}
+
+.goal-item-details label {
+    margin-top: 14px;
+}
+
+.goal-item-details .goal-monthly {
+    color: #6EE7C8;
+    font-weight: 600;
+    line-height: 1.5;
+}

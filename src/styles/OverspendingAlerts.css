@@ -1,0 +1,651 @@
+
+/* ==============================
+   MAIN PAGE
+============================== */
+
+.overspending-page {
+    min-height: 100vh;
+    padding: 30px;
+    background: #071821;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+}
+
+/* ==============================
+   PAGE HEADER
+============================== */
+
+.overspending-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.overspending-label {
+    color: #6EE7C8;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.overspending-header h1 {
+    font-size: 30px;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.overspending-header p {
+    color: #A9C1C0;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.month-badge {
+    flex-shrink: 0;
+    padding: 12px 19px;
+    background: rgba(30, 155, 131, 0.15);
+    border: 1px solid rgba(110, 231, 200, 0.3);
+    border-radius: 10px;
+    color: #6EE7C8;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+/* ==============================
+   SUMMARY CARDS
+============================== */
+
+.overspending-summary {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 18px;
+    margin-bottom: 25px;
+}
+
+.overspending-summary-card {
+    padding: 23px;
+    background: #102A32;
+    border: 1px solid rgba(169, 229, 209, 0.12);
+    border-radius: 15px;
+    transition: 0.25s ease;
+    min-width: 0;
+}
+
+.overspending-summary-card:hover {
+    transform: translateY(-4px);
+    border-color: #1E9B83;
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.2);
+}
+
+.overspending-summary-card > span {
+    display: block;
+    color: #A9C1C0;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 14px;
+}
+
+.overspending-summary-card strong {
+    display: block;
+    color: #ffffff;
+    font-size: 25px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    word-break: break-word;
+}
+
+.overspending-summary-card small {
+    color: #91AAA7;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.overspending-summary-card .negative-amount {
+    color: #FF858C;
+}
+
+.status-text {
+    font-weight: 700;
+}
+
+.status-text.good {
+    color: #6EE7C8;
+}
+
+.status-text.warning {
+    color: #FFC66D;
+}
+
+.status-text.danger {
+    color: #FF858C;
+}
+
+.status-text.neutral {
+    color: #A9C1C0;
+}
+
+/* ==============================
+   COMMON SECTION CARD
+============================== */
+
+.overspending-card {
+    background: #102A32;
+    border: 1px solid rgba(169, 229, 209, 0.12);
+    border-radius: 16px;
+    padding: 26px;
+    margin-bottom: 25px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.13);
+}
+
+.overspending-section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 23px;
+}
+
+.overspending-section-heading h2 {
+    color: #A9E5D1;
+    font-size: 21px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.overspending-section-heading p {
+    color: #A9C1C0;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* ==============================
+   STATUS BADGES
+============================== */
+
+.status-badge {
+    display: inline-block;
+    flex-shrink: 0;
+    padding: 7px 13px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.status-badge.good {
+    color: #6EE7C8;
+    background: rgba(30, 155, 131, 0.15);
+    border: 1px solid rgba(110, 231, 200, 0.2);
+}
+
+.status-badge.warning {
+    color: #FFC66D;
+    background: rgba(255, 183, 77, 0.12);
+    border: 1px solid rgba(255, 198, 109, 0.25);
+}
+
+.status-badge.danger {
+    color: #FF999F;
+    background: rgba(255, 100, 110, 0.12);
+    border: 1px solid rgba(255, 133, 140, 0.25);
+}
+
+.status-badge.neutral {
+    color: #A9C1C0;
+    background: rgba(169, 193, 192, 0.1);
+    border: 1px solid rgba(169, 193, 192, 0.2);
+}
+
+/* ==============================
+   OVERALL PROGRESS
+============================== */
+
+.overall-progress-details {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    color: #D5E8E2;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.progress-track {
+    width: 100%;
+    height: 10px;
+    overflow: hidden;
+    background: #071821;
+    border-radius: 20px;
+}
+
+.overall-track {
+    height: 13px;
+}
+
+.progress-fill {
+    height: 100%;
+    border-radius: 20px;
+    transition: width 0.5s ease;
+}
+
+.progress-fill.good {
+    background: linear-gradient(90deg, #157A68, #6EE7C8);
+}
+
+.progress-fill.warning {
+    background: linear-gradient(90deg, #D99A36, #FFC66D);
+}
+
+.progress-fill.danger {
+    background: linear-gradient(90deg, #C74752, #FF858C);
+}
+
+.progress-fill.neutral {
+    background: #78918F;
+}
+
+.progress-percentage {
+    margin-top: 12px;
+    color: #A9C1C0;
+    font-size: 13px;
+    text-align: right;
+}
+
+/* ==============================
+   ALERT COUNT CARDS
+============================== */
+
+.alert-count-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+    margin-bottom: 25px;
+}
+
+.alert-count-card {
+    padding: 23px;
+    border-radius: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    transition: 0.25s ease;
+}
+
+.alert-count-card:hover {
+    transform: translateY(-3px);
+}
+
+.alert-count-card span {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.alert-count-card strong {
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.alert-count-card small {
+    font-size: 12px;
+}
+
+.warning-count {
+    background: rgba(255, 183, 77, 0.09);
+    border: 1px solid rgba(255, 198, 109, 0.22);
+}
+
+.warning-count span,
+.warning-count small {
+    color: #FFC66D;
+}
+
+.warning-count strong {
+    color: #FFD48A;
+}
+
+.danger-count {
+    background: rgba(255, 100, 110, 0.09);
+    border: 1px solid rgba(255, 133, 140, 0.22);
+}
+
+.danger-count span,
+.danger-count small {
+    color: #FF999F;
+}
+
+.danger-count strong {
+    color: #FF858C;
+}
+
+/* ==============================
+   CATEGORY ALERT LIST
+============================== */
+
+.category-alert-list {
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+}
+
+.category-alert-item {
+    padding: 21px;
+    background: #0B222B;
+    border: 1px solid #24434B;
+    border-radius: 12px;
+    transition: 0.25s ease;
+}
+
+.category-alert-item:hover {
+    border-color: #1E9B83;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.15);
+}
+
+.category-alert-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.category-alert-top h3 {
+    color: #ffffff;
+    font-size: 17px;
+    font-weight: 700;
+    margin-bottom: 7px;
+}
+
+.category-allocation {
+    color: #91AAA7;
+    font-size: 12px;
+}
+
+/* CATEGORY MONEY DETAILS */
+.category-money-details {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 15px;
+    margin-bottom: 18px;
+}
+
+.category-money-details div {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.category-money-details span {
+    color: #91AAA7;
+    font-size: 12px;
+}
+
+.category-money-details strong {
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 700;
+    word-break: break-word;
+}
+
+.category-money-details .negative-amount {
+    color: #FF858C;
+}
+
+.category-money-details .positive-amount {
+    color: #6EE7C8;
+}
+
+/* CATEGORY PROGRESS FOOTER */
+.category-progress-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 9px;
+    margin-top: 12px;
+    color: #A9C1C0;
+    font-size: 12px;
+}
+
+.warning-note {
+    color: #FFC66D;
+}
+
+.danger-note {
+    color: #FF858C;
+}
+
+/* EMPTY STATE */
+.overspending-empty {
+    padding: 25px;
+    background: #0B222B;
+    border: 1px dashed #31505A;
+    border-radius: 10px;
+    color: #A9C1C0;
+    font-size: 14px;
+    line-height: 1.7;
+    text-align: center;
+}
+
+/* ==============================
+   ALERT MESSAGES
+============================== */
+
+.alert-message {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    padding: 18px 20px;
+    border-radius: 12px;
+    margin-bottom: 16px;
+}
+
+.alert-message:last-child {
+    margin-bottom: 0;
+}
+
+.alert-message h3 {
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 7px;
+}
+
+.alert-message p {
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+.alert-icon {
+    width: 32px;
+    height: 32px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.alert-info {
+    background: rgba(74, 163, 210, 0.09);
+    border: 1px solid rgba(74, 163, 210, 0.25);
+}
+
+.alert-info h3,
+.alert-info .alert-icon {
+    color: #75C9F0;
+}
+
+.alert-info p {
+    color: #A9C1C0;
+}
+
+.alert-info .alert-icon {
+    background: rgba(74, 163, 210, 0.15);
+}
+
+.alert-warning {
+    background: rgba(255, 183, 77, 0.09);
+    border: 1px solid rgba(255, 198, 109, 0.25);
+}
+
+.alert-warning h3,
+.alert-warning .alert-icon {
+    color: #FFC66D;
+}
+
+.alert-warning p {
+    color: #D5C3A4;
+}
+
+.alert-warning .alert-icon {
+    background: rgba(255, 183, 77, 0.15);
+}
+
+.alert-danger {
+    background: rgba(255, 100, 110, 0.09);
+    border: 1px solid rgba(255, 133, 140, 0.25);
+}
+
+.alert-danger h3,
+.alert-danger .alert-icon {
+    color: #FF858C;
+}
+
+.alert-danger p {
+    color: #D9A6A9;
+}
+
+.alert-danger .alert-icon {
+    background: rgba(255, 100, 110, 0.15);
+}
+
+.alert-success {
+    background: rgba(30, 155, 131, 0.09);
+    border: 1px solid rgba(110, 231, 200, 0.22);
+}
+
+.alert-success h3,
+.alert-success .alert-icon {
+    color: #6EE7C8;
+}
+
+.alert-success p {
+    color: #A9C1C0;
+}
+
+.alert-success .alert-icon {
+    background: rgba(30, 155, 131, 0.15);
+}
+
+/* ==============================
+   FOOTER NOTE
+============================== */
+
+.overspending-disclaimer {
+    padding: 16px 19px;
+    background: rgba(30, 155, 131, 0.07);
+    border-left: 3px solid #1E9B83;
+    border-radius: 7px;
+    color: #91AAA7;
+    font-size: 12px;
+    line-height: 1.7;
+    margin-top: 8px;
+}
+
+/* ==============================
+   TABLET RESPONSIVE
+============================== */
+
+@media (max-width: 1100px) {
+    .overspending-summary {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* ==============================
+   MOBILE RESPONSIVE
+============================== */
+
+@media (max-width: 650px) {
+    .overspending-page {
+        padding: 18px;
+    }
+
+    .overspending-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .overspending-header h1 {
+        font-size: 25px;
+    }
+
+    .overspending-summary {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .overspending-summary-card {
+        padding: 16px;
+    }
+
+    .overspending-summary-card > span {
+        font-size: 12px;
+    }
+
+    .overspending-summary-card strong {
+        font-size: 19px;
+    }
+
+    .overspending-card {
+        padding: 18px;
+    }
+
+    .overspending-section-heading {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .overspending-section-heading h2 {
+        font-size: 19px;
+    }
+
+    .category-alert-item {
+        padding: 16px;
+    }
+
+    .category-money-details {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .category-alert-top {
+        align-items: flex-start;
+    }
+
+    .alert-count-card {
+        padding: 17px;
+    }
+
+    .alert-count-card strong {
+        font-size: 25px;
+    }
+
+    .overall-progress-details {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 380px) {
+    .overspending-summary {
+        grid-template-columns: 1fr;
+    }
+
+    .alert-count-grid {
+        grid-template-columns: 1fr;
+    }
+}
